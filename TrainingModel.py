@@ -11,7 +11,7 @@ from numpy import where
 import joblib
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # %%
-df = pd.read_csv(current_dir + '/Data/prescription.csv',encoding="cp1252", header=0) #Importing Data
+df = pd.read_csv(current_dir + '/prescription.csv',encoding="cp1252", header=0) #Importing Data
 df = df[['drugno', 'dose', 'age', 'weight']]  #Selecting Columns
 #df.head()
 svm = OneClassSVM(kernel='rbf', gamma='scale', nu=0.01, verbose=True) # Setting OneClassSVM model
